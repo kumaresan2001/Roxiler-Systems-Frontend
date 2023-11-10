@@ -1,7 +1,7 @@
 
 .image{
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
 }
 .select{
   text-align: center;
@@ -25,3 +25,16 @@
 .table-display{
   margin-top: 50px;
 }
+thead{
+  font-size: larger;
+  
+}
+td{
+  font-weight: 400;
+  
+}
+td{
+  padding:30px ;
+  
+}
+

@@ -1,51 +1,6 @@
-// // src/components/TransactionsBarChart.js
-// import axios from "axios";
-// import { API } from "../global";
-// import { Bar } from "react-chartjs-2";
-
-// function TransactionsBarChart() {
-
-//  useEffect(() => {
-//     async function fetchBarChartData() {
-//       try {
-//         const response = await axios.get(
-//           `${API}/bar-chart?month=${selectedMonth}`
-//         );
-//         setBarChartData(response.data);
-//       } catch (error) {
-//         console.error("Error fetching bar chart data", error);
-//       }
-//     }
-
-//     fetchBarChartData();
-//   }, [selectedMonth]);
-
-//   const chartData = {
-//     labels: Object.keys(data),
-//     datasets: [
-//       {
-//         label: "Number of Items",
-//         data: Object.values(data),
-//         backgroundColor: "rgba(75, 192, 192, 0.2)",
-//         borderColor: "rgba(75, 192, 192, 1)",
-//         borderWidth: 1,
-//       },
-//     ],
-//   };
-
-//   return (
-//     <div>
-//       <h2>Price Range Chart</h2>
-//       <Bar data={chartData} />
-//     </div>
-//   );
-// }
-
-// export default TransactionsBarChart;
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { API } from "../global";
-import React from "react";
 
 import {
   Chart as ChartJS,
@@ -106,10 +61,7 @@ export function BarChart() {
     <div>
       <div>
         <div className="select">
-          <select
-            className="dropdown-select"
-            onChange={(e) => setMonth(e.target.value)}
-          >
+          <select className="input" onChange={(e) => setMonth(e.target.value)}>
             <option value={"January"}>January </option>
             <option value={"February"}>February</option>
             <option value={"March"} selected>
@@ -130,6 +82,7 @@ export function BarChart() {
       <h1>
         Bar Cart Stats-<span>{month}</span>
       </h1>
+
       <Bar
         options={options}
         data={{
