@@ -1,0 +1,27 @@
+
+.image{
+  height: 50px;
+  width: 50px;
+}
+.select{
+  text-align: center;
+  margin-top: 50px;
+ 
+}
+.Statistics{
+  text-align: center;
+  margin-top: 50px;
+  
+}
+.input{
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+ border-color: black;
+ border-width: 2px;
+ font-size: larger;
+}
+.table-display{
+  margin-top: 50px;
+}
